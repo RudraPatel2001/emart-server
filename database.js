@@ -1,5 +1,7 @@
-const { Pool } = require('pg');
+const { Pool, Client } = require('pg');
 require('dotenv').config()
+
+const c = new Client('postgres://emart:gt9pqba48rFQixF7MNVCehOLsTLvQEEd@dpg-ce93uh1a6gdhr72g35b0-a/emart_ol39')
 
 // const c = new Pool({
 //     host: "localhost",
@@ -9,14 +11,14 @@ require('dotenv').config()
 //     database: "pern"
 // })
 
-const c = new Pool({
-    host: process.env.PG_HOST,
-    user: process.env.PG_USER,
-    port: process.env.PG_PORT,
-    password: process.env.PG_PASSWORD,
-    database: process.env.PG_DATABASE,
-    ssl: { rejectUnauthorized: false }
-})
+// const c = new Pool({
+//     host: process.env.PG_HOST,
+//     user: process.env.PG_USER,
+//     port: process.env.PG_PORT,
+//     password: process.env.PG_PASSWORD,
+//     database: process.env.PG_DATABASE,
+//     ssl: { rejectUnauthorized: false }
+// })
 
 // const c = new Pool({
 //     host: 'ec2-54-228-32-29.eu-west-1.compute.amazonaws.com',
