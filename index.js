@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 require('dotenv').config()
 
-app.use(cors({ origin: ['http://localhost:3000'], credentials: true }));
+app.use(cors({ origin: ['https://emart-client.netlify.app'], credentials: true }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(session({
     secret: 'abcdefghijklmnopqrstuvwxyz',
