@@ -31,6 +31,6 @@ install using npm :
 npm install axios
 
 import axios from "axios"
-axios.get(path)
-  .then(res => console.log(res.data))
+axios.get(path)  
+  .then(res => console.log(res.data))  
   .catch(err => console.log(err))
